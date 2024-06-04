@@ -13,7 +13,7 @@ The tool only captures the code portion of this screen and shows it fullscreen o
 
 image::/docs/usage-schema.png?raw=true[Usage Schema,583,168]
 
-Personally I use this mode to host C++ usergroup meetings, client meetings and professional C++ trainings.
+Personally I use this mode to host C\++ usergroup meetings, team meetings and professional C++ trainings.
 
 ### Capture Area Mode
 
