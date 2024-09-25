@@ -138,7 +138,7 @@ void MainApplication::updateScreenRect(Rect rect) {
 
 void MainApplication::captureScreen(int screen) {
     if (config().operationMode != OperationMode::PresentMirror) return; // not used in this mode
-    if (m_state.config.captureMonitor != screen && m_state.monitors.size() > screen) {
+    if (m_state.config.captureMonitor != screen && static_cast<int>(m_state.monitors.size()) > screen) {
         m_state.config.captureMonitor = screen;
         if (m_state.duplicationStatus == DuplicationStatus::Live && m_duplicationController)
             m_duplicationController->restart();
@@ -273,7 +273,7 @@ void MainApplication::toggleOutputMaximize() {
 void MainApplication::refreshMonitors() {
     resetMonitors();
     if (m_state.config.operationMode == OperationMode::PresentMirror) {
-        if (m_state.config.captureMonitor >= m_state.monitors.size()) {
+        if (m_state.config.captureMonitor >= static_cast<int>(m_state.monitors.size())) {
             captureScreen(0);
         }
         else {

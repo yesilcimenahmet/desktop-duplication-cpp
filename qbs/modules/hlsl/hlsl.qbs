@@ -6,8 +6,6 @@ import qbs.ModUtils
 import qbs.Utilities
 
 Module {
-    id: module
-
     property string hlslName: "fxc.exe"
     property string hlslPath: hlslName
     property string outputDir: "hlsl"
